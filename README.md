@@ -15,7 +15,7 @@ Modify *conf/env_db.yaml* and *conf/env_vars.yaml*<br>
 Upgrade<br>
 > ansible-playbook upgrade.yaml<br>
 
-Clean after upgrade.<br>
+Clean after upgrade<br>
 > ansible-playbook clean.yaml<br>
 
 # Prerequisities
