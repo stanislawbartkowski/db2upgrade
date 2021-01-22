@@ -1,0 +1,5 @@
+- name: Stop DB2 if started
+
+  shell: "ps -ef | grep [d]b2sysc && db2stop"
+  register: out
+  failed_when: out.rc >= 2

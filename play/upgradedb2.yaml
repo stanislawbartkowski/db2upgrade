@@ -1,0 +1,6 @@
+- name: Install FixPack
+  shell: ' {{ unpackdir }}/server_t/installFixPack -b {{ currentdir }}  -p {{ fpdir }}'
+#  when: 0>1
+
+- name: Upgrade instance  
+  shell: ' {{ fpdir }}/instance/db2iupdt db2inst1'

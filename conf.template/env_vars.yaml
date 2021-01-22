@@ -1,0 +1,8 @@
+imagedir: /home/sbartkowski/work/fp
+imagefile: v11.1.4fp4_linuxx64_server_t.tar.gz
+currentdir: /opt/ibm/db2/V11.1
+fpdir: /opt/ibm/db2/V11.1.45
+unpackdir: /tmp/i
+databases: 
+  - SAMPLE
+  - BANK

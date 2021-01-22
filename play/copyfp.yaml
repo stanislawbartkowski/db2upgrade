@@ -1,0 +1,19 @@
+- name: Clean unpack folder
+  file:
+    state: absent
+    path: '{{ unpackdir }}'
+
+- name: Create unpack directory if not exists
+  file:
+    path: '{{ unpackdir }}'
+    state: directory
+    mode: '0755'
+
+- name: Upload FP image
+  copy:
+    src:  '{{ imagedir }}/{{ imagefile }}'
+    dest: /tmp
+
+- name: Unpack image archive
+  shell: 'tar xvfz /tmp/{{ imagefile }} -C {{ unpackdir }}'
+  

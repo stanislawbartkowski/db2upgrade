@@ -1,0 +1,2 @@
+- name: 'Uninstall {{ currentdir }}'
+  shell: '{{ currentdir }}/install/db2_deinstall -a'

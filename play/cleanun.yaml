@@ -1,0 +1,4 @@
+- name: Clean unpack folder
+  file:
+    state: absent
+    path: '{{ unpackdir }}'

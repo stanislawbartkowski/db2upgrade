@@ -1,0 +1,32 @@
+- name: Upgrade DB2
+  hosts: db
+  remote_user: root  
+
+  vars_files:
+    - conf/env_vars.yaml
+    - conf/env_db.yaml
+
+  tasks:
+    - include: play/db2stop.yaml
+      become_user: db2inst1
+      become: true
+      become_method: su
+      become_flags: "-"
+#      when: 0>1
+
+    - include: play/cleanun.yaml
+    - include: play/copyfp.yaml
+#      when: 0>1
+
+    - include: play/upgradedb2.yaml
+#      when: 0>1
+  
+    - include: play/updatedb.yaml
+      become_user: db2inst1
+      become: true
+      become_method: su
+      become_flags: "-"
+#      when: 0>1
+
+#    - debug: var=out.stdout_lines
+

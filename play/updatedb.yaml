@@ -1,0 +1,15 @@
+- name: 'Start DB2 instance'
+  shell: "ps -ef | grep [d]b2sysc || db2start"
+  register: out
+  failed_when: out.rc >= 2
+
+- name: 'Update DB2 databases'
+  shell: 'db2updv111 -d {{ item }}'
+  register: out
+  with_list: '{{ databases }}'
+
+- debug: var=out.stdout_lines
+
+
+
+
