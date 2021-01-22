@@ -12,21 +12,24 @@
       become: true
       become_method: su
       become_flags: "-"
-#      when: 0>1
+#      when: False
 
     - include: play/cleanun.yaml
+#      when: False
+
     - include: play/copyfp.yaml
-#      when: 0>1
+#      when: False
 
     - include: play/upgradedb2.yaml
-#      when: 0>1
+#      when: False
   
     - include: play/updatedb.yaml
       become_user: db2inst1
       become: true
       become_method: su
       become_flags: "-"
-#      when: 0>1
+#      debugger: always
+#      when: False
 
 #    - debug: var=out.stdout_lines
 
