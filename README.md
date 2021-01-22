@@ -1,6 +1,6 @@
 # db2upgrade
 
-It is a simple Ansible playbook allowing remote installation DB2 FixPack in DB2 instance and databases. Two main playbooks are specified: upgrade and clean after upgrade.<br> 
+It is a simple Ansible playbook allowing remote installation of DB2 FixPack in DB2 instance and databases. Two main playbooks are specified: upgrade and clean after the upgrade.<br> 
 The playbook was tested for DB2 11.1 (not latest DB2 11.5).<br>
 
 # Installation
@@ -20,7 +20,7 @@ Clean after upgrade.<br>
 
 # Prerequisities
 
-Ansible on client desktop. Tested with Ansible 2.9.16.<br>
+Ansible on the client desktop. Tested with Ansible 2.9.16.<br>
 <br>
 Ansible inventory contains group *db*, list of DB2 hosts where upgrade is to be performed.<br>
 
