@@ -56,7 +56,7 @@ Download appropriate DB2 11.1 Fixpack and save it on the client machine.<br>
 | fpdir | DB2 FixPack installation directory | /opt/ibm/db2/V11.1.45
 | unpackdir | Directory on the remote host where FP image is uncompressed | /tmp/i
 
-*conf/env_db.yaml*<br<
+*conf/env_db.yaml*<br>
 List of databases in the instance. Example:
 ```yaml
 databases: 
