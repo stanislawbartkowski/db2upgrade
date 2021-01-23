@@ -42,7 +42,7 @@ db2111
 
 https://www.ibm.com/support/pages/download-db2-fix-packs-version-db2-linux-unix-and-windows
 
-Download appropriate DB2 11.1 Fixpack and save it on the desktop machine.<br>
+Download appropriate DB2 11.1 Fixpack and save it on the client machine.<br>
 
 # Ansible variables
 
